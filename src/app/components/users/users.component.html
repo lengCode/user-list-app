@@ -1,0 +1,13 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <app-user *ngFor="let user of users" [user]="user"></app-user>
+  </tbody>
+</table>
