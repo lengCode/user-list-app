@@ -5,9 +5,23 @@
       <th>Name</th>
       <th>Username</th>
       <th>Email</th>
+      <th>Action</th>
     </tr>
   </thead>
-  <tbody>
-    <app-user *ngFor="let user of users" [user]="user"></app-user>
+  <tbody *ngFor="let user of users">
+    <!-- <app-user *ngFor="let user of users" [user]="user"></app-user> -->
+    <tr>
+      <th>{{ user.id }}</th>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>
+        <div class="row">
+          <button class="btn btn-success view btn-sm">View</button>
+          <button class="btn btn-warning view btn-sm">Update</button>
+          <button class="btn btn-danger view btn-sm">Delete</button>
+        </div>
+      </td>
+    </tr>
   </tbody>
 </table>
